@@ -1,5 +1,3 @@
-//  OCFResult.swift - SPKController_2
-//  Copyright © 2022 Samsung Electronics. All rights reserved.
 
 import Foundation
 import SCClient

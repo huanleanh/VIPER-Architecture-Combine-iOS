@@ -21,6 +21,9 @@
 		7BDFBD5B2B4D60120051AEB2 /* OCF in Resources */ = {isa = PBXBuildFile; fileRef = 7BDFBD592B4D60120051AEB2 /* OCF */; };
 		7BDFBD5C2B4D60120051AEB2 /* D2D in Resources */ = {isa = PBXBuildFile; fileRef = 7BDFBD5A2B4D60120051AEB2 /* D2D */; };
 		7BDFBD5E2B4D61140051AEB2 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFBD5D2B4D61140051AEB2 /* APIHelper.swift */; };
+		7BDFBD652B4D81580051AEB2 /* Stuffs in Resources */ = {isa = PBXBuildFile; fileRef = 7BDFBD622B4D81570051AEB2 /* Stuffs */; };
+		7BDFBD662B4D81580051AEB2 /* Stuffs_note.md in Resources */ = {isa = PBXBuildFile; fileRef = 7BDFBD632B4D81570051AEB2 /* Stuffs_note.md */; };
+		7BDFBD672B4D81580051AEB2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7BDFBD642B4D81570051AEB2 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		7BDFBD592B4D60120051AEB2 /* OCF */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OCF; sourceTree = "<group>"; };
 		7BDFBD5A2B4D60120051AEB2 /* D2D */ = {isa = PBXFileReference; lastKnownFileType = folder; path = D2D; sourceTree = "<group>"; };
 		7BDFBD5D2B4D61140051AEB2 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		7BDFBD622B4D81570051AEB2 /* Stuffs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Stuffs; sourceTree = "<group>"; };
+		7BDFBD632B4D81570051AEB2 /* Stuffs_note.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Stuffs_note.md; sourceTree = "<group>"; };
+		7BDFBD642B4D81570051AEB2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 		7BDFBD352B4CE2200051AEB2 /* VolumeRemote */ = {
 			isa = PBXGroup;
 			children = (
+				7BDFBD642B4D81570051AEB2 /* README.md */,
+				7BDFBD622B4D81570051AEB2 /* Stuffs */,
+				7BDFBD632B4D81570051AEB2 /* Stuffs_note.md */,
 				7BDFBD542B4D5F4A0051AEB2 /* API */,
 				7BDFBD362B4CE2200051AEB2 /* AppDelegate.swift */,
 				7BDFBD382B4CE2200051AEB2 /* SceneDelegate.swift */,
@@ -160,8 +169,11 @@
 				7BDFBD432B4CE2230051AEB2 /* LaunchScreen.storyboard in Resources */,
 				7BDFBD5C2B4D60120051AEB2 /* D2D in Resources */,
 				7BDFBD402B4CE2230051AEB2 /* Assets.xcassets in Resources */,
+				7BDFBD662B4D81580051AEB2 /* Stuffs_note.md in Resources */,
 				7BDFBD3E2B4CE2200051AEB2 /* Main.storyboard in Resources */,
 				7BDFBD5B2B4D60120051AEB2 /* OCF in Resources */,
+				7BDFBD672B4D81580051AEB2 /* README.md in Resources */,
+				7BDFBD652B4D81580051AEB2 /* Stuffs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

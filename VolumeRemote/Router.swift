@@ -12,7 +12,7 @@ import UIKit
 
 protocol RouterProtocol: AnyObject {
     var view: ViewProtocol? {get set}
-
+    
 }
 
 class Router: RouterProtocol {

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,6 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyT-mG-Zux" userLabel="Loading View">
+                                <rect key="frame" x="0.0" y="47" width="428" height="845"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Pcc-iW-rjo">
+                                        <rect key="frame" x="194" y="402.66666666666669" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="RSS-Mg-mYK"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="YaX-QN-C0r"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Pcc-iW-rjo" firstAttribute="centerX" secondItem="xyT-mG-Zux" secondAttribute="centerX" id="1Bh-bq-Ok7"/>
+                                    <constraint firstItem="Pcc-iW-rjo" firstAttribute="centerY" secondItem="xyT-mG-Zux" secondAttribute="centerY" id="OBq-i3-MDn"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zx-NL-YBp" userLabel="Tittle View">
                                 <rect key="frame" x="30" y="77" width="368" height="68"/>
                                 <subviews>
@@ -145,7 +163,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufs-jO-7Sy">
                                                 <rect key="frame" x="134" y="20" width="100" height="60"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="VJe-yo-eA4"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="VJe-yo-eA4"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Mute"/>
@@ -170,24 +188,31 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xyT-mG-Zux" secondAttribute="bottom" id="8UR-nk-sYc"/>
                             <constraint firstItem="8zx-NL-YBp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="8eZ-95-5mA"/>
+                            <constraint firstItem="xyT-mG-Zux" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EbF-yU-YhV"/>
                             <constraint firstItem="8zx-NL-YBp" firstAttribute="leading" secondItem="3na-zY-BF0" secondAttribute="leading" id="G5L-Bj-KTL"/>
                             <constraint firstItem="TpN-Ih-Uw9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ID4-Xx-xEL"/>
                             <constraint firstItem="8zx-NL-YBp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Nj3-T5-VZe"/>
                             <constraint firstItem="3na-zY-BF0" firstAttribute="top" secondItem="8zx-NL-YBp" secondAttribute="bottom" constant="10" id="PEo-SK-qvb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E4f-p2-42U" secondAttribute="trailing" constant="30" id="Sbc-8o-WyI"/>
+                            <constraint firstAttribute="trailing" secondItem="xyT-mG-Zux" secondAttribute="trailing" id="Ylj-dd-fAn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TpN-Ih-Uw9" secondAttribute="trailing" constant="30" id="abM-L7-lgW"/>
                             <constraint firstItem="E4f-p2-42U" firstAttribute="top" secondItem="TpN-Ih-Uw9" secondAttribute="bottom" constant="20" id="awc-YU-ndm"/>
                             <constraint firstItem="E4f-p2-42U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="hOQ-nj-N3R"/>
                             <constraint firstItem="3na-zY-BF0" firstAttribute="top" secondItem="8zx-NL-YBp" secondAttribute="bottom" constant="10" id="jCy-Lg-Z0g"/>
                             <constraint firstItem="TpN-Ih-Uw9" firstAttribute="top" secondItem="3na-zY-BF0" secondAttribute="bottom" constant="10" id="jL5-oe-vWi"/>
                             <constraint firstItem="8zx-NL-YBp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k6a-fw-791"/>
+                            <constraint firstItem="xyT-mG-Zux" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="nfK-uV-tam"/>
                             <constraint firstItem="8zx-NL-YBp" firstAttribute="trailing" secondItem="3na-zY-BF0" secondAttribute="trailing" id="zer-YY-12V"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="modeButton" destination="Rgf-dS-DYN" id="CQw-Wv-TPR"/>
+                        <outlet property="connectionModeButton" destination="Rgf-dS-DYN" id="CQw-Wv-TPR"/>
+                        <outlet property="loadingIndicator" destination="Pcc-iW-rjo" id="0AX-vB-9if"/>
+                        <outlet property="loadingView" destination="xyT-mG-Zux" id="GCu-O1-FWW"/>
                         <outlet property="muteButton" destination="ufs-jO-7Sy" id="hCm-G1-NBV"/>
+                        <outlet property="rootView" destination="8bC-Xf-vdC" id="jpS-oN-knP"/>
                         <outlet property="volDownButton" destination="oKL-3y-gSF" id="5Rx-Db-Wrt"/>
                         <outlet property="volUpButton" destination="F8N-kk-tY1" id="cbL-IG-qvU"/>
                         <outlet property="volumeInfoText" destination="bvH-9Z-2GG" id="2sW-BU-1Y2"/>

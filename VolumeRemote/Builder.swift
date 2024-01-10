@@ -17,14 +17,14 @@ protocol BuilderProtocol: AnyObject {
 class Builder: BuilderProtocol {
     func build() -> ViewProtocol? {
         
-        var router = Router()
+        let router = Router()
         var view = ViewController()
-        var interactor = Interactor()
+        let interactor = Interactor()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         view = storyboard.instantiateViewController(identifier: "ViewController")
         
-        var presenter = Presenter(view: view, router: router, interactor: interactor)
+        let presenter = Presenter(view: view, router: router, interactor: interactor)
         
         view.presenter = presenter
         interactor.presenter = presenter

@@ -48,13 +48,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func volDownButtonClicked(_ sender: Any) {
-        makeLoadingView(isShow: true)
+//        makeLoadingView(isShow: true)
         print("User adjusted volume down")
         adjustVolume(isAdd: false)
     }
     
     @IBAction func volUpButtonClicked(_ sender: Any) {
-        makeLoadingView(isShow: true)
+//        makeLoadingView(isShow: true)
         print("User adjusted volume up")
         adjustVolume(isAdd: true)
     }

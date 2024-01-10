@@ -19,7 +19,9 @@ class Builder: BuilderProtocol {
         
         let router = Router()
         var view = ViewController()
-        let interactor = Interactor()
+        
+        let apiNetwork = APINetwork()
+        let interactor = Interactor(apiNetwork: apiNetwork)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         view = storyboard.instantiateViewController(identifier: "ViewController")

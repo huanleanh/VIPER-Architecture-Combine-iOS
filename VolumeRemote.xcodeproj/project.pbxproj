@@ -29,6 +29,7 @@
 		7BDFBD532B4D33F10051AEB2 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFBD522B4D33F10051AEB2 /* Builder.swift */; };
 		7BDFBD5E2B4D61140051AEB2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFBD5D2B4D61140051AEB2 /* API.swift */; };
 		7BDFBD652B4D81580051AEB2 /* Stuffs in Resources */ = {isa = PBXBuildFile; fileRef = 7BDFBD622B4D81570051AEB2 /* Stuffs */; };
+		BB3CFBB82B4F0A30001C29BC /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3CFBB72B4F0A30001C29BC /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		7BDFBD522B4D33F10051AEB2 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		7BDFBD5D2B4D61140051AEB2 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		7BDFBD622B4D81570051AEB2 /* Stuffs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Stuffs; sourceTree = "<group>"; };
+		BB3CFBB72B4F0A30001C29BC /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				7BDFBD4C2B4CE26B0051AEB2 /* Router.swift */,
 				7BDFBD522B4D33F10051AEB2 /* Builder.swift */,
 				7BDFBD502B4CE28C0051AEB2 /* Interactor.swift */,
+				BB3CFBB72B4F0A30001C29BC /* Repository.swift */,
 				7BDFBD4A2B4CE2520051AEB2 /* Entity.swift */,
 			);
 			path = VolumeRemote;
@@ -214,6 +217,7 @@
 				7B7F31AC2B4EC7AD00918003 /* ID2DProcess.swift in Sources */,
 				7B7F31A52B4EC7A700918003 /* OCFResponse.swift in Sources */,
 				7BDFBD372B4CE2200051AEB2 /* AppDelegate.swift in Sources */,
+				BB3CFBB82B4F0A30001C29BC /* Repository.swift in Sources */,
 				7B7F31A62B4EC7A700918003 /* OCFError.swift in Sources */,
 				7B149ADF2B4EAAC7005E9BDE /* APIInfo.swift in Sources */,
 				7BDFBD512B4CE28C0051AEB2 /* Interactor.swift in Sources */,

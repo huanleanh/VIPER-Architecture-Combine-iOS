@@ -46,6 +46,7 @@
 		7BDFBD522B4D33F10051AEB2 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		7BDFBD5D2B4D61140051AEB2 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BB3CFBB72B4F0A30001C29BC /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		BB3CFBB92B5062BF001C29BC /* z.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = z.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +86,7 @@
 		7BDFBD2A2B4CE2200051AEB2 = {
 			isa = PBXGroup;
 			children = (
+				BB3CFBB92B5062BF001C29BC /* z.playground */,
 				7BDFBD352B4CE2200051AEB2 /* VolumeRemote */,
 				7B149AE02B4EBD30005E9BDE /* Extension */,
 				7BDFBD342B4CE2200051AEB2 /* Products */,

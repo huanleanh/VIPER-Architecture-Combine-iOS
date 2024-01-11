@@ -15,7 +15,6 @@ let MAX_VOLUME = 10
 
 protocol ViewProtocol: AnyObject {
     var presenter: PresenterProtocol? {get set}
-    
 }
 
 class ViewController: UIViewController {
@@ -36,11 +35,23 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var volumeInfoText: UILabel!
     
-    var volumeValue = 5
+    @IBOutlet weak var muteStateImage: UIImageView!
     
-    var isMuted = false
+    var volumeValue = 5 {
+        didSet {
+            volumeInfoText.text = String(volumeValue)
+        }
+    }
+    
+    var isMuted = false {
+        didSet {
+            muteStateImage.image = isMuted ? UIImage(named: "mute.png") : UIImage(named: "unmute.png")
+        }
+    }
     
     var presenter: PresenterProtocol?
+    
+    var bags = Set<AnyCancellable>()
     
     @IBAction func modeHasChanged(_ sender: Any) {
         print("User changed connecttion mode from \(connectionModeButton.isOn ? "D2D" : "D2S") to \(connectionModeButton.isOn ? "D2S" : "D2D")")
@@ -48,22 +59,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func volDownButtonClicked(_ sender: Any) {
-//        makeLoadingView(isShow: true)
+        makeLoadingView(isShow: true)
         print("User adjusted volume down")
         adjustVolume(isAdd: false)
     }
     
     @IBAction func volUpButtonClicked(_ sender: Any) {
-//        makeLoadingView(isShow: true)
+        makeLoadingView(isShow: true)
         print("User adjusted volume up")
         adjustVolume(isAdd: true)
     }
     
-    @IBAction func mutButtonClicked(_ sender: Any) {
+    @IBAction func muteButtonClicked(_ sender: Any) {
         makeLoadingView(isShow: true)
-        isMuted = !isMuted
+//        isMuted = !isMuted
         print("User tapped on Mute button, is mute: \(isMuted)")
-        presenter?.updateMuteState(isMute: isMuted)
+        presenter?.updateMuteState(isMute: !isMuted)
     }
     
     override func viewDidLoad() {
@@ -84,20 +95,30 @@ class ViewController: UIViewController {
     func adjustVolume(isAdd: Bool) {
         if isAdd {
             if self.volumeValue < MAX_VOLUME {
-                self.volumeValue += 1
+//                self.volumeValue += 1
+                presenter?.adjustVolume(volumeValue: volumeValue + 1)
             } else {
                 return
             }
         } else {
             if self.volumeValue > MIN_VOLUME {
-                self.volumeValue -= 1
+//                self.volumeValue -= 1
+                presenter?.adjustVolume(volumeValue: volumeValue - 1)
             } else {
                 return
             }
         }
-        print("New volume is: \(volumeValue)")
-        volumeInfoText.text = String(volumeValue)
-        presenter?.adjustVolume(volumeValue: volumeValue)
+        
+    }
+    
+    func updateVolumeText() {
+        print("Get data for view, speaker's volume: \(String(describing: presenter?.dataForView.volume))")
+        volumeValue = (presenter?.dataForView.volume)!
+    }
+    
+    func updateMuteState() {
+        print("Get data for view, speaker is muted: \(String(describing: presenter?.dataForView.isMute))")
+        isMuted = (presenter?.dataForView.isMute)!
     }
     
     func setup() {
@@ -111,6 +132,19 @@ class ViewController: UIViewController {
         
         func setupAction() {
             
+            presenter?.presenterPublisher
+                .receive(on: DispatchQueue.main)
+                .sink(receiveValue: { [weak self] event in
+                    switch event {
+                    case .muteStateHasUpdated: 
+                        self?.makeLoadingView(isShow: false)
+                        self?.updateMuteState()
+                    case .volumeHasUpdated:
+                        self?.makeLoadingView(isShow: false)
+                        self?.updateVolumeText()
+                    }
+                })
+                .store(in: &bags)
         }
         
         setupUI()

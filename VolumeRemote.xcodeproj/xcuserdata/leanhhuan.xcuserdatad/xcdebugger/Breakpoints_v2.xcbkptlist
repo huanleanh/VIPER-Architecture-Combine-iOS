@@ -3,4 +3,337 @@
    uuid = "AA7D519F-839F-4B02-96F7-808C00F6BF99"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56282EE1-012C-4FEC-B171-BD3815CA77AF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VolumeRemote/Network/D2SManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "apiRequest(speakerRepo:apiInfo:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "56282EE1-012C-4FEC-B171-BD3815CA77AF - 1a319ad25228dd75"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 ((Swift.Result&lt;Swift.String, Swift.Never&gt;) -&gt; ()) -&gt; () in VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "167">
+               </Location>
+               <Location
+                  uuid = "56282EE1-012C-4FEC-B171-BD3815CA77AF - 1a319ad25228dc2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 ((Swift.Result&lt;Swift.String, Swift.Never&gt;) -&gt; ()) -&gt; () in VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "167">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90AD453F-6DA7-4C50-B179-C3F6EEF9EBCA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VolumeRemote/Network/D2SManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "apiRequest(speakerRepo:apiInfo:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "90AD453F-6DA7-4C50-B179-C3F6EEF9EBCA - 1a319ad25228dcd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 ((Swift.Result&lt;Swift.String, Swift.Never&gt;) -&gt; ()) -&gt; () in VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "521">
+               </Location>
+               <Location
+                  uuid = "90AD453F-6DA7-4C50-B179-C3F6EEF9EBCA - 1a319ad25228df89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 ((Swift.Result&lt;Swift.String, Swift.Never&gt;) -&gt; ()) -&gt; () in VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "521">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50E0295E-DB74-4820-BB1F-8422B8B2256D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VolumeRemote/Network/D2SManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "apiRequest(speakerRepo:apiInfo:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "50E0295E-DB74-4820-BB1F-8422B8B2256D - f3463b468ca51a63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "886">
+               </Location>
+               <Location
+                  uuid = "50E0295E-DB74-4820-BB1F-8422B8B2256D - 3c570fbae21b0447"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;Swift.String, Swift.Never&gt;) -&gt; ()) -&gt; () in VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  uuid = "50E0295E-DB74-4820-BB1F-8422B8B2256D - f3463b468ca51a63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "1027">
+               </Location>
+               <Location
+                  uuid = "50E0295E-DB74-4820-BB1F-8422B8B2256D - f3463b468ca51b08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1188">
+               </Location>
+               <Location
+                  uuid = "50E0295E-DB74-4820-BB1F-8422B8B2256D - 3c570fbae21b056e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;Swift.String, Swift.Never&gt;) -&gt; ()) -&gt; () in VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  uuid = "50E0295E-DB74-4820-BB1F-8422B8B2256D - f3463b468ca51b08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1368">
+               </Location>
+               <Location
+                  uuid = "50E0295E-DB74-4820-BB1F-8422B8B2256D - f3463b468ca51b08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1649">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1ECC5D4-7EDD-4FCD-A811-B6AB13650706"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VolumeRemote/Network/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "request(speakerRepo:apiInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C335C56E-943C-4311-A326-60F0D1A75BE2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VolumeRemote/Network/D2SManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "apiRequest(speakerRepo:apiInfo:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C335C56E-943C-4311-A326-60F0D1A75BE2 - f3463b468ca51a42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "446">
+               </Location>
+               <Location
+                  uuid = "C335C56E-943C-4311-A326-60F0D1A75BE2 - f3463b468ca51a42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "507">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97837B26-BA8D-45C0-88B2-5ED934216386"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VolumeRemote/Network/D2SManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "apiRequest(speakerRepo:apiInfo:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "97837B26-BA8D-45C0-88B2-5ED934216386 - f3463b468ca51a00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "907">
+               </Location>
+               <Location
+                  uuid = "97837B26-BA8D-45C0-88B2-5ED934216386 - f3463b468ca51a00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VolumeRemote.D2SManager.apiRequest(speakerRepo: VolumeRemote.SpeakerRepositoryProtocol, apiInfo: VolumeRemote.APIInfo) -&gt; Combine.AnyPublisher&lt;Swift.String, Swift.Never&gt;"
+                  moduleName = "VolumeRemote"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leanhhuan/repos/example_viper_combine/VolumeRemote/Network/D2SManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "1078">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

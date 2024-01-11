@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 
-//typealias EntryPoint = ViewProtocol
-
 protocol BuilderProtocol: AnyObject {
     func build() -> ViewProtocol?
 }
@@ -20,8 +18,11 @@ class Builder: BuilderProtocol {
         let router = Router()
         var view = ViewController()
         
-        let apiNetwork = APINetwork()
-        let interactor = Interactor(apiNetwork: apiNetwork)
+        let initSpeaker = Speaker()
+        let speakerStore = SpeakerStore(speaker: initSpeaker)
+        let speakerRepository = SpeakerRepository(speakerStore: speakerStore)
+        
+        let interactor = Interactor(speakerRepository: speakerRepository, speaker: initSpeaker)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         view = storyboard.instantiateViewController(identifier: "ViewController")
@@ -29,7 +30,7 @@ class Builder: BuilderProtocol {
         let presenter = Presenter(view: view, router: router, interactor: interactor)
         
         view.presenter = presenter
-        interactor.presenter = presenter
+//        interactor.presenter = presenter
         router.view = view
         
         return view

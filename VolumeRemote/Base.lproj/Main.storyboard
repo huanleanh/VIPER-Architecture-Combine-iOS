@@ -83,7 +83,7 @@
                                 <rect key="frame" x="30" y="265.33333333333331" width="368" height="69"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current volume:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZJ-5N-XtW">
-                                        <rect key="frame" x="20" y="10" width="258" height="49"/>
+                                        <rect key="frame" x="20" y="10" width="218" height="49"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -97,6 +97,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unmute" translatesAutoresizingMaskIntoConstraints="NO" id="SxQ-Mk-YNs">
+                                        <rect key="frame" x="248" y="19.666666666666686" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="0Fl-ok-7X6"/>
+                                            <constraint firstAttribute="height" constant="30" id="Jn1-9Q-d4w"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -104,9 +111,11 @@
                                     <constraint firstAttribute="bottom" secondItem="bvH-9Z-2GG" secondAttribute="bottom" constant="10" id="LUB-Na-JsQ"/>
                                     <constraint firstAttribute="trailing" secondItem="bvH-9Z-2GG" secondAttribute="trailing" constant="30" id="PKK-ac-qxN"/>
                                     <constraint firstItem="6ZJ-5N-XtW" firstAttribute="leading" secondItem="TpN-Ih-Uw9" secondAttribute="leading" constant="20" id="UPq-u6-yTo"/>
+                                    <constraint firstItem="SxQ-Mk-YNs" firstAttribute="leading" secondItem="6ZJ-5N-XtW" secondAttribute="trailing" constant="10" id="VwE-uR-awG"/>
                                     <constraint firstAttribute="bottom" secondItem="6ZJ-5N-XtW" secondAttribute="bottom" constant="10" id="eWf-le-l1s"/>
-                                    <constraint firstItem="bvH-9Z-2GG" firstAttribute="leading" secondItem="6ZJ-5N-XtW" secondAttribute="trailing" id="p8j-Fu-CHV"/>
+                                    <constraint firstItem="SxQ-Mk-YNs" firstAttribute="centerY" secondItem="TpN-Ih-Uw9" secondAttribute="centerY" id="oWF-Xt-472"/>
                                     <constraint firstItem="bvH-9Z-2GG" firstAttribute="top" secondItem="TpN-Ih-Uw9" secondAttribute="top" constant="10" id="pcE-ul-0Ty"/>
+                                    <constraint firstItem="bvH-9Z-2GG" firstAttribute="leading" secondItem="SxQ-Mk-YNs" secondAttribute="trailing" id="qhq-Z3-Apx"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="E4f-p2-42U">
@@ -168,7 +177,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Mute"/>
                                                 <connections>
-                                                    <action selector="mutButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XNq-WC-eJp"/>
+                                                    <action selector="muteButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XNq-WC-eJp"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -212,6 +221,7 @@
                         <outlet property="loadingIndicator" destination="Pcc-iW-rjo" id="0AX-vB-9if"/>
                         <outlet property="loadingView" destination="xyT-mG-Zux" id="GCu-O1-FWW"/>
                         <outlet property="muteButton" destination="ufs-jO-7Sy" id="hCm-G1-NBV"/>
+                        <outlet property="muteStateImage" destination="SxQ-Mk-YNs" id="6LL-bP-k6y"/>
                         <outlet property="rootView" destination="8bC-Xf-vdC" id="jpS-oN-knP"/>
                         <outlet property="volDownButton" destination="oKL-3y-gSF" id="5Rx-Db-Wrt"/>
                         <outlet property="volUpButton" destination="F8N-kk-tY1" id="cbL-IG-qvU"/>
@@ -224,6 +234,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="unmute" width="170.66667175292969" height="170.66667175292969"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

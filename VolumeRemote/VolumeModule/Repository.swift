@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import Combine
 
 protocol SpeakerRepositoryProtocol: AnyObject {
+    var repoPublisher: PassthroughSubject<VolumeEvent, Never> { get }
     func getSpeaker() -> Speaker
     func updateSpeaker(with speaker: Speaker)
     func adjustVolume(volumeValue: Int)
@@ -18,9 +20,14 @@ protocol SpeakerRepositoryProtocol: AnyObject {
 
 class SpeakerRepository: SpeakerRepositoryProtocol {
     private let speakerStore: SpeakerStore
+    private let APINetwork: APINetworkProtocol
+    
+    private(set) var repoPublisher = PassthroughSubject<VolumeEvent, Never>()
+    private var bags: Set<AnyCancellable> = []
 
     init(speakerStore: SpeakerStore) {
         self.speakerStore = speakerStore
+        self.APINetwork = VolumeRemote.APINetwork()
     }
 
     func getSpeaker() -> Speaker {
@@ -44,8 +51,25 @@ class SpeakerRepository: SpeakerRepositoryProtocol {
     }
     
     func request(speaker: Speaker, apiInfo: APIInfo) {
-            // Thực hiện logic gọi API dựa trên apiInfo.
-            // Sử dụng APINetwork để gửi yêu cầu và cập nhật speaker sau khi nhận phản hồi.
+        APINetwork.request(speakerRepo: self, apiInfo: apiInfo)
+        .sink(receiveCompletion: { completion in
+            switch completion {
+            case .finished:
+                print("API request completed successfully")
+            case .failure(let error):
+                print("API request failed with error: \(error)")
+            }
+        }, receiveValue: { [weak self] (isMute, volume) in
+            if let isMute = isMute {
+                self?.updateSpeaker(with: Speaker(isMute: isMute))
+                self?.repoPublisher.send(.muteStateHasUpdated)
+            }
+            if let volume = volume {
+                self?.updateSpeaker(with: Speaker(volume: volume))
+                self?.repoPublisher.send(.volumeHasUpdated)
+            }
+        })
+        .store(in: &bags)
         }
 }
 
@@ -61,7 +85,14 @@ class SpeakerStore {
     }
 
     func updateSpeaker(with speaker: Speaker) {
-        self.speaker = speaker
+        if speaker.isMute != nil {
+//            print("Updated mute state")
+            self.speaker.isMute = speaker.isMute
+        }
+        if speaker.volume != nil {
+//            print( "Updated volume")
+            self.speaker.volume = speaker.volume
+        }
     }
 
     func adjustVolume(volumeValue: Int) {
@@ -73,6 +104,8 @@ class SpeakerStore {
     }
 
     func updateConnection(type: ConnectionType) {
+        print ("update connection type: ", type)
         speaker.connectionType = type
+//        print("New speaker value: ", speaker)
     }
 }

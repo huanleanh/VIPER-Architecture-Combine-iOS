@@ -18,7 +18,7 @@ class D2DManager: D2dManagerProtocol {
         }
         
         return Future<String, Never> { promise in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 switch apiInfo.useCase {
                 case .setVolume:
                     let responseString = self.getSetVolumeResponse(speaker: speakerRepo.getSpeaker(), apiInfo: apiInfo)

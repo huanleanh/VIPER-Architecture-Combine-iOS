@@ -1,6 +1,8 @@
 import Combine
 import Foundation
 
+var bags  = Set<AnyCancellable>()
+
 //let publisher = Just(1)
 //let subscriber = publisher.sink { value in
 //    print(value)
@@ -31,49 +33,67 @@ import Foundation
 //let subscriber = publisher.sink { value in
 //        print(value)
 //    }
-
+//
 //let pSubject = PassthroughSubject<String, Never>()
 //let cSubject = CurrentValueSubject<String, Never>("Hello, World!!!")
 //
-//// Subscribe to the PassthroughSubject
-//let subscription = pSubject.sink { value in
+//let subscription = cSubject.sink { value in
 //    print("Received value: \(value)")
 //}
 //
-//// Send a value through the PassthroughSubject
-//pSubject.send("Hello, World!")
+//cSubject.send("Hello, World!")
+//cSubject.send("Hello, World1!")
 //
-//// Cancel the subscription
 //subscription.cancel()
 
-//let numbers = [1, 2, 3, 4, 5]
-//let sum = numbers.publisher
-//    .reduce(0, { accumulator, value in
-//        return accumulator - value
-//    })
+//import Combine
 //
-//sum.sink { value in
-//    print("Sum: \(value)")
-//}
+//let a = [1, 3, "c" , 4] as [Any]
+//let b = ["a", "b"] as [Any]
+//
+//let c = a.merge(with: b)
+
+import Combine
+
+let numbers = (1...10).publisher
+
+numbers
+    .buffer(size: 8, prefetch: .byRequest, whenFull: .dropOldest)
+    .sink { group in
+        print(group)
+    }
 
 
-//let numbers = [1, 2, 3, 4, 5]
+//let numbers = [1, 2, nil, 4, 5]
 //let publisher = numbers.publisher
-//let mappedPublisher = publisher.map { $0 * 2 }
+//let mappedPublisher = publisher.compactMap { value in
+////    print("--", value)
+//    var x: Int?
+//    if let value = value { x = value*2 }
+////    print("ret : ", x)
+//    return x
+//}
 //let subscription = mappedPublisher.sink { value in
 //    print(value)
 //}
 // Output: 2, 4, 6, 8, 10
 
 
-//let publisher1 = PassthroughSubject<Int, Never>()
+
+//let publisher1 = CurrentValueSubject<Int, Never>(1)
 //let publisher2 = PassthroughSubject<String, Never>()
-//let combinedPublisher = publisher1.combineLatest(publisher2)
+//let combinedPublisher = publisher1.zip(publisher2)
 //let subscription = combinedPublisher.sink { (value1, value2) in
 //    print("Combined value: \(value1), \(value2)")
 //}
-//publisher1.send(1)
+////publisher1.send(1)
+//
+////zip(1, )
+//
 //publisher2.send("A")
+//// zip(1,A)
+////zip()
+//
 //publisher1.send(2)
 //publisher2.send("B")
 // Output:
@@ -109,7 +129,8 @@ import Foundation
 //    )
 //Output: Error: invalidValue
 
-var bags  = Set<AnyCancellable>()
+
+
 //let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 //    .publisher
 //    .multicast(subject: postsSubject)
@@ -127,20 +148,20 @@ var bags  = Set<AnyCancellable>()
 //    .store(in: &bags)
 
 
-let numbers = (1...3).publisher
-let multicastSubject = PassthroughSubject<Int, Never>()
-let multicast = numbers
-    .multicast(subject: multicastSubject)
-multicast
-    .sink { value in
-        print("Subscriber 1 received value: \(value)")
-    }
-multicast
-    .sink { value in
-        print("Subscriber 2 received value: \(value)")
-    }
-
-multicast.connect()
+//let numbers = (1...3).publisher
+//let multicastSubject = PassthroughSubject<Int, Never>()
+//let multicast = numbers
+//    .multicast(subject: multicastSubject)
+//multicast
+//    .sink { value in
+//        print("Subscriber 1 received value: \(value)")
+//    }
+//multicast
+//    .sink { value in
+//        print("Subscriber 2 received value: \(value)")
+//    }
+//
+//multicast.connect()
 
 //Subscriber 1 received value: 1
 //Subscriber 2 received value: 1
@@ -152,7 +173,65 @@ multicast.connect()
 
 
 //multicastSubject.send(0)
-multicastSubject.send(completion: .finished)
+//multicastSubject.send(completion: .finished)
+
+
+//let publisher1 = PassthroughSubject<Int, Never>()
+//let publisher2 = PassthroughSubject<String, Never>()
+//
+//let zippedPublisher = publisher1.zip(publisher2)
+//
+//zippedPublisher.sink { value in
+//    print(value)
+//}
+//
+//publisher1.send(1)
+//publisher1.send(2)
+//publisher1.send(3)
+//publisher1.send(3)
+//publisher1.send(3)
+//publisher1.send(3)
+//publisher2.send("A")
+//publisher2.send("s")
+
+
+//let publisher1 = PassthroughSubject<Int, Never>()
+//let publisher2 = PassthroughSubject<String, Never>()
+//
+//let combinedPublisher = publisher1.combineLatest(publisher2)
+//
+//combinedPublisher.sink { value in
+//    print(value)
+//}
+//
+//publisher1.send(1)
+//publisher2.send("A")
+//publisher1.send(2)
+//publisher2.send("B")
+
+
+//let publisher = [1, 2, 3, 4, 5].publisher
+//
+//publisher
+//    .throttle(for: .seconds(1), scheduler: DispatchQueue.main, latest: true)
+//    .sink { value in
+//        print(value)
+//    }.store(in: &bags)
+//Outut: 5
+
+
+//let publisher = [1, 2, 3, 4, 5].publisher
+//
+//publisher
+//    .delay(for: .seconds(2), scheduler: DispatchQueue.main)
+//    .sink { value in
+//        print(value)
+//    }.store(in: &bags)
+
+
+
+
+
 
 //https://www.canva.com/design/DAF5ltBCM5Y/4n1b5ZP3j93nvlbZgzWDGg/edit
 

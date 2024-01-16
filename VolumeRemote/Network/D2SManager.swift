@@ -25,7 +25,7 @@ final class D2SManager: D2SManagerProtocol {
         
         
         return Future<String, Never> { promise in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 switch apiInfo.useCase {
                 case .setVolume:
                     let responseString = self.getSetVolumeResponse(speaker: speakerRepo.getSpeaker(), apiInfo: apiInfo)

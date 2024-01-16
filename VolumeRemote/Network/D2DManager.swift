@@ -38,7 +38,7 @@ class D2DManager: D2dManagerProtocol {
     }
     
     func getSetVolumeResponse(speaker: Speaker, apiInfo:APIInfo) -> String {
-        let ret = String("<?xml version=\"1.0\" encoding=\"UTF-8\"?><UIC><method>VolumeLevel</method><version>1.0</version><speakerip>192.168.106.202</speakerip><user_identifier>28268B6C-3C47-4DBE-88F9-97AEF8BECCD7</user_identifier><response result=\"ok\"><volume></volume></response></UIC>".replacingOccurrences(of: "<volume></volume>", with: "<volume>\(apiInfo.params[0].volume!)</volume>"))
+        let ret = String("<?xml version=\"1.0\" encoding=\"UTF-8\"?><UIC><method>VolumeLevel</method><version>1.0</version><speakerip>192.168.106.202</speakerip><user_identifier>28268B6C-3C47-4DBE-88F9-97AEF8BECCD7</user_identifier><response result=\"ok\"><volume></volume></response></UIC>".replacingOccurrences(of: "<volume></volume>", with: "<volume>\(Int.random(in: 1...10))</volume>"))
         return ret
     }
     

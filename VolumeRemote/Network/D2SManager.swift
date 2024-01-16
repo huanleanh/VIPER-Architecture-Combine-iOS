@@ -40,7 +40,7 @@ final class D2SManager: D2SManagerProtocol {
     }
     
     func getSetVolumeResponse(speaker: Speaker, apiInfo:APIInfo) -> String {
-        return "{\n\t\"volume\":\t\(apiInfo.params[0].volume!),\n\t\"mute\":\tfalse\n}"
+        return "{\n\t\"volume\":\t\(Int.random(in: 1...10)),\n\t\"mute\":\tfalse\n}"
     }
     
     func getSetMuteResponse(speaker: Speaker, apiInfo:APIInfo)  -> String {
